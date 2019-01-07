@@ -14,7 +14,7 @@ class facturaPaga
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 		$consulta =$objetoAccesoDato->RetornarConsulta("
 		SELECT * 
-		FROM factura_paga 
+		FROM facturapaga 
 		WHERE idFactura = :idFactura
 		ORDER BY fechaPago DESC
 		");
@@ -29,7 +29,7 @@ class facturaPaga
 	{
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 		$consulta =$objetoAccesoDato->RetornarConsulta(
-			"INSERT into factura_paga (idFactura, montoPagado, fechaPago) 
+			"INSERT into facturapaga (idFactura, montoPagado, fechaPago) 
 			values(:idFactura, :montoPagado, :fechaPago)");
 
 		$consulta->bindValue(':idFactura',$factura->idFactura, PDO::PARAM_INT);

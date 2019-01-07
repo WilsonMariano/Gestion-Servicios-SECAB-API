@@ -17,7 +17,7 @@
             $factura->idEmpresa = $datosRecibidos['idEmpresa'];
             $factura->domicilio = $datosRecibidos['domicilio'];
             $factura->proxVencimiento = $datosRecibidos['proxVencimiento'];
-            $factura->montoAnterior = $datosRecibidos['montoAnterior'];
+            $factura->datosCuenta = $datosRecibidos['datosCuenta'];
 
             $resultado = Factura::Insertar($factura);
 
@@ -36,7 +36,7 @@
             $factura->idEmpresa = $datosRecibidos['idEmpresa'];
             $factura->domicilio = $datosRecibidos['domicilio'];
             $factura->proxVencimiento = $datosRecibidos['proxVencimiento'];
-            $factura->montoAnterior = $datosRecibidos['montoAnterior'];
+            $factura->datosCuenta = $datosRecibidos['datosCuenta'];
 
             $resultado = Factura::Editar($factura);  
             if($resultado != 0)
